@@ -1,25 +1,44 @@
 import React from 'react'
+import Card from './Card'
 import axios, { AxiosResponse } from 'axios'
 
 
 const Cards = () => {
-    const [topTen, setTopTen] = React.useState<AxiosResponse | [] >([])
+    const [topTen, setTopTen] = React.useState<any[]>([])
     
     //fetch top 10 results from top-airing
-    const fetchMostPopular = () => {
-        axios.get('https://api.consumet.org/anime/gogoanime/top-airing')
+    const fetchMostPopular = async () => {
+       await axios.get('https://api.consumet.org/anime/gogoanime/top-airing')
         .then((response) => {
-            console.log(response);
-            setTopTen(response.data.results)
+            let array = Object.values(response.data.results)
+            setTopTen(array)
         }).catch((error) => console.log(error))
     }
 
+    interface animeTypes {
+        id:string;
+        title:string;
+        image:string;
+        url:string;
+        
+    }
+
+    const cardElements = topTen.map((anime: animeTypes)=> {
+        return <Card key={anime.id} title={anime.title} image={anime.image} url={anime.url} />
+    })
+   
+
+
     React.useEffect(() => {
-        fetchMostPopular();
+        void fetchMostPopular();
     }, [])
 
+    
+
   return (
-    <div>Cards</div>
+    <div>
+        {cardElements}
+    </div>
   )
 }
 
