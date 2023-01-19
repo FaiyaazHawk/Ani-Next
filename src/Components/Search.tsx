@@ -1,9 +1,13 @@
 import React from 'react'
+import SearchBar from '../Components/SearchBar'
+import Results from '../Components/Results'
+import '../Styles/Search.css'
 
 const Search = () => {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className='search-page'>
+      <SearchBar />
+      <Results />
 
     </div>
   )
