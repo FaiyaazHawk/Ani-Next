@@ -1,3 +1,17 @@
 nav {
     background-color: #333;
 }
+
+.links {
+    display: flex;
+    line-height: 4rem;
+    justify-content: space-around;
+    
+    
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    
+}

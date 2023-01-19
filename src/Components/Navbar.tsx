@@ -5,12 +5,12 @@ import '../Styles/Navbar.css'
 const Navbar = () => {
   return (
     <nav>
-        <ul>
+        <ul className='links'>
             <li>
-              <Link to="/"> Home</Link>
+              <Link className='link' to="/"> Home</Link>
             </li>
             <li>
-              <Link to="/search">Search</Link>
+              <Link className='link' to="/search">Search</Link>
             </li>
         </ul>
     </nav>
