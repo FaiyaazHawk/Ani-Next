@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/Card.css'
 
 interface Proptypes {
     title:string;
@@ -8,11 +9,13 @@ interface Proptypes {
 
 const Card = ({title, image, url}:Proptypes) => {
   return (
-    <div >
-        <p>{title}</p>
-        <p>{image}</p>
-        <p>{url}</p>
+    <a className='card-link' href={url}>
+        <div className='card-container'>
+        <p >{title}</p>
+        <img className='card-image' src={image} alt="#" />
     </div>
+    </a>
+    
   )
 }
 

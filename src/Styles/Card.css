@@ -1,0 +1,17 @@
+.card-container {
+    border: 5px solid black;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-image {
+    height: 200px;
+    width: auto;
+}
+
+.card-link {
+    color: #333;
+    text-decoration: none;
+}
