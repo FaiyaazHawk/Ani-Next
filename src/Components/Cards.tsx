@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
+import '../Styles/Cards.css'
 
 
 const Cards = () => {
@@ -36,7 +37,7 @@ const Cards = () => {
     
 
   return (
-    <div>
+    <div className='cards-panel'>
         {cardElements}
     </div>
   )

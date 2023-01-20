@@ -10,9 +10,8 @@ interface Proptypes {
 const Card = ({title, image, url}:Proptypes) => {
   return (
     <a className='card-link' href={url}>
-        <div className='card-container'>
-        <p >{title}</p>
-        <img className='card-image' src={image} alt="#" />
+        <div className='card-container' style={{backgroundImage: `url(${image})`}}>
+        <p className='card-body' >{title}</p>
     </div>
     </a>
     

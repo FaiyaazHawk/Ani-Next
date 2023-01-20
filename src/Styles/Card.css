@@ -1,17 +1,31 @@
 .card-container {
-    border: 5px solid black;
-    margin: 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: none;
+    aspect-ratio: 4/4;
+    border-radius: 0.75rem;
+    height: 50vh;
+    width: 80%;
+    
 }
 
-.card-image {
-    height: 200px;
-    width: auto;
+.card-body {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    font-size: larger;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #333;
     text-decoration: none;
+    width: fit-content;
 }
