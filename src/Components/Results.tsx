@@ -6,7 +6,7 @@ interface Props {results: any[]}
 const Results: FC<Props> = ({results}) => {
 
   const resultElements = results.map((result) =>{
-    return <Card key={result.id} title={result.title} image={result.image} url={result.url}/>
+    return <Card key={result.id} id={result.id} title={result.title} image={result.image} url={result.url}/>
   })
 
   return (
