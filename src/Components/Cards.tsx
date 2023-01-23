@@ -5,11 +5,9 @@ import axios from 'axios'
 import '../Styles/Cards.css'
 
 
-interface PropTypes {
-    setGlobalId: Function
-  }
 
-const Cards = ({setGlobalId}:PropTypes) => {
+
+const Cards = () => {
 
     
 
@@ -34,7 +32,7 @@ const Cards = ({setGlobalId}:PropTypes) => {
     }
 
     const cardElements = topTen.map((anime: animeTypes)=> {
-        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} url={anime.url} setGlobalId={setGlobalId} />
+        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} url={anime.url}  />
     })
    
 

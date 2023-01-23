@@ -4,25 +4,21 @@ import Footer from "./Components/Footer"
 import Home from "./Components/Home"
 import Search from "./Components/Search"
 import InfoPage from './Components/InfoPage'
-import {Route, Routes} from "react-router-dom"
+import {Route, Routes, useParams} from "react-router-dom"
 import './Styles/App.css'
 
 
 function App() {
 
-  const [id, setId] = React.useState('')
   
-  const setGlobalId = (id:string) => {
-      setId(id);
-  }
 
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home setGlobalId={setGlobalId} />}/>
+        <Route path="/" element={<Home  />}/>
         <Route path="/search" element={<Search />}/>
-        <Route path={`/${id}`} element={<InfoPage id={`${id}`} />} />
+        <Route path="/:id" element={<InfoPage />} />
       </Routes>
       <Footer />
     </div>
