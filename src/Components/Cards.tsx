@@ -1,11 +1,20 @@
 import React from 'react'
 import Card from './Card'
 import axios from 'axios'
+
 import '../Styles/Cards.css'
 
 
-const Cards = () => {
+interface PropTypes {
+    setGlobalId: Function
+  }
+
+const Cards = ({setGlobalId}:PropTypes) => {
+
+    
+
     const [topTen, setTopTen] = React.useState<any[]>([])
+    
     
     //fetch top 10 results from top-airing
     const fetchMostPopular = async () => {
@@ -21,11 +30,11 @@ const Cards = () => {
         title:string;
         image:string;
         url:string;
-        
+        setGlobalId:Function;
     }
 
     const cardElements = topTen.map((anime: animeTypes)=> {
-        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} url={anime.url} />
+        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} url={anime.url} setGlobalId={setGlobalId} />
     })
    
 

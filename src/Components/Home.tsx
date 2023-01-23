@@ -2,11 +2,15 @@ import React, { ReactNode } from 'react'
 import Cards from "../Components/Cards"
 import '../Styles/Home.css'
 
-const Home = () => {
+interface PropTypes {
+  setGlobalId: Function
+}
+
+const Home = ({setGlobalId}:PropTypes) => {
   return (
     <div className='home-page'>
       <section className='home-title'>Welcome to AniNext</section>
-      <Cards />
+      <Cards setGlobalId={setGlobalId} />
     </div>
   )
 }
