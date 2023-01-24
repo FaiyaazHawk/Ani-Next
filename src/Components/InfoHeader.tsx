@@ -1,6 +1,6 @@
-import { AxiosResponse } from 'axios';
-import React from 'react'
 
+import React from 'react'
+import '../Styles/InfoHeader.css'
 interface PropTypes {
     title:string;
     description:string;
@@ -9,9 +9,7 @@ interface PropTypes {
     
 }
 
-interface dataTypes {
-    
-}
+
 
 
 const InfoHeader = ({title, description, image}:PropTypes) => {
@@ -20,8 +18,11 @@ const InfoHeader = ({title, description, image}:PropTypes) => {
     
   return (
     <div className='infoHeader'>
-        <img src={image} alt={title} />
-        
+            <img className='info-image' src={image} alt={title} />
+        <div className="info-details">
+            <h2 className='info-title'>{title}</h2>
+            <p className='info-description'>{description}</p>
+        </div> 
     </div>
   )
 }

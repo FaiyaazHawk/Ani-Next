@@ -1,16 +1,22 @@
 import React from 'react'
-import { AxiosResponse } from 'axios';
+import { Await } from 'react-router-dom';
+
 
 interface PropTypes {
-    
-    episodes:Object[];
-   
-    
+    episodes:Object[]; 
 }
 
+
+
 const InfoEpisodes = ({ episodes }:PropTypes) => {
+
+   console.log(episodes)
+
   return (
-    <div>InfoEpisodes</div>
+    <div className='episode-wrapper'>
+        <h2>Episode List</h2>
+        
+    </div>
   )
 }
 

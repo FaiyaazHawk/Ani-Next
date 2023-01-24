@@ -2,7 +2,7 @@ import React from 'react'
 import InfoHeader from './InfoHeader'
 import InfoEpisodes from './InfoEpisodes'
 import { useParams } from 'react-router-dom'
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
 
 const InfoPage = () => {
 
@@ -14,6 +14,8 @@ const InfoPage = () => {
 }
 
   const [animeInfo, setAnimeInfo] = React.useState<dataTypes[] | any>([])
+
+  
 
   //getting the id from the params
   let params = useParams()
@@ -33,6 +35,8 @@ const InfoPage = () => {
   React.useEffect(() => {
     fetchInfodata();
   }, [])
+
+  
 
   return (
     <div className='infopage-body' >

@@ -1,0 +1,23 @@
+.infoHeader {
+    display: flex;
+}
+
+.info-image {
+    width: 45%
+}
+
+.info-details {
+    padding-left: 1rem;
+}
+
+.info-title {
+    text-decoration: underline;
+    font-size: larger;
+    padding-bottom: 1rem;
+}
+
+.info-desciption {
+    padding-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
