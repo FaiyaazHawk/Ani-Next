@@ -28,7 +28,7 @@ const Cards = () => {
         title:string;
         image:string;
         url:string;
-        setGlobalId:Function;
+
     }
 
     const cardElements = topTen.map((anime: animeTypes)=> {

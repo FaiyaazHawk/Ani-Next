@@ -1,6 +1,14 @@
 import React from 'react'
+import { AxiosResponse } from 'axios';
 
-const InfoEpisodes = () => {
+interface PropTypes {
+    
+    episodes:Object[];
+   
+    
+}
+
+const InfoEpisodes = ({ episodes }:PropTypes) => {
   return (
     <div>InfoEpisodes</div>
   )
