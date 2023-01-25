@@ -16,7 +16,7 @@ interface EpisodeTypes {
   return (
     <div className='episode-wrapper'>
         {(episodes) && episodes.map((episode:EpisodeTypes)=>{
-          return <a className='episode-item' key={episode.id} href={`${episode.url}`} >Episode {episode.number}</a>
+          return <a className='episode-item' key={episode.id} href={`/video/${episode.id}`} >Episode {episode.number}</a>
         })}
     </div>
   )

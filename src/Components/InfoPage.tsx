@@ -3,6 +3,7 @@ import InfoHeader from './InfoHeader'
 import InfoEpisodes from './InfoEpisodes'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import '../Styles/InfoPage.css'
 
 const InfoPage = () => {
 
