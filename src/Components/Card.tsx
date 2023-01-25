@@ -5,13 +5,12 @@ interface Proptypes {
     id:string;
     title:string;
     image:string;
-    url:string;
     
 }
 
 
 
-const Card = ({id,title, image, url}:Proptypes) => {
+const Card = ({id,title, image}:Proptypes) => {
   
 
   return (

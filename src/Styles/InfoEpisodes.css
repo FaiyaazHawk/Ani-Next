@@ -1,0 +1,16 @@
+.episode-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.episode-item {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 1rem;
+    color: black;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 24%, rgba(171,171,199,1) 69%, rgba(0,212,255,1) 100%);
+}

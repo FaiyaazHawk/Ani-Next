@@ -27,12 +27,12 @@ const Cards = () => {
         id:string;
         title:string;
         image:string;
-        url:string;
+        
 
     }
 
     const cardElements = topTen.map((anime: animeTypes)=> {
-        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} url={anime.url}  />
+        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} />
     })
    
 

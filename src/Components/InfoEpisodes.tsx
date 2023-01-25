@@ -1,21 +1,23 @@
 import React from 'react'
-import { Await } from 'react-router-dom';
-
+import '../Styles/InfoEpisodes.css'
 
 interface PropTypes {
-    episodes:Object[]; 
+    episodes:Object[] | any; 
 }
-
-
 
 const InfoEpisodes = ({ episodes }:PropTypes) => {
 
-   console.log(episodes)
+interface EpisodeTypes {
+  id:string;
+  number:string;
+  url:string;
+}
 
   return (
     <div className='episode-wrapper'>
-        <h2>Episode List</h2>
-        
+        {(episodes) && episodes.map((episode:EpisodeTypes)=>{
+          return <a className='episode-item' key={episode.id} href={`${episode.url}`} >Episode {episode.number}</a>
+        })}
     </div>
   )
 }
