@@ -1,11 +1,10 @@
 import React from 'react'
 import Navbar from "./Components/Navbar"
-import Footer from "./Components/Footer"
 import Home from "./Components/Home"
 import Search from "./Components/Search"
 import InfoPage from './Components/InfoPage'
 import EpisodePage from './Components/EpisodePage'
-import {Route, Routes, useParams} from "react-router-dom"
+import {Route, Routes} from "react-router-dom"
 import './Styles/App.css'
 
 
@@ -22,7 +21,6 @@ function App() {
         <Route path="/:id" element={<InfoPage />} />
         <Route path="/video/:id" element={<EpisodePage />} />
       </Routes>
-      <Footer />
     </div>
   )
 }

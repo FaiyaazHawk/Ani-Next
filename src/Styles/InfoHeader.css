@@ -1,10 +1,11 @@
 .infoHeader {
     display: flex;
+    flex-direction: column;
 }
 
 .info-image {
-    width: auto;
-    height: 50vh;
+    width: fit-content;
+    height: 15rem;
 }
 
 .info-details {
