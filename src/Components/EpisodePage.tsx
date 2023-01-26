@@ -41,6 +41,7 @@ const EpisodePage = () => {
 
   return (
     <div className='video-player'>
+      <h1 className='episode-title'>Currently watching {params.id}</h1>
       {episodeInfo && videoElements}
     </div>
   )
