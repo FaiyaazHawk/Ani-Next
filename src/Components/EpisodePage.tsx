@@ -13,10 +13,7 @@ const EpisodePage = () => {
 
   let EPISODE_STRING = `https://api.consumet.org/anime/gogoanime/watch/${params.id}`
 
-  interface xTypes{
-    quality:string;
-  }
-
+  
   const fetchEpisodesources = async () => {
     await axios.get(EPISODE_STRING)
     .then((response) => {
@@ -36,7 +33,7 @@ const EpisodePage = () => {
   }
 
   const videoElements = episodeInfo.map((episode:episodeTypes)=> {
-    return <ReactPlayer controls={true} key={episode.quality} url={episode.url}></ReactPlayer>
+    return <ReactPlayer  width={'100vw'} controls={true} key={episode.quality} url={episode.url}></ReactPlayer>
   })
 
   return (
