@@ -7,22 +7,20 @@ export default defineConfig({
   plugins: [react(),
     VitePWA({ registerType: 'autoUpdate', 
     manifest: {
-      name: 'My Awesome App',
-      short_name: 'MyApp',
-      description: 'My Awesome App description',
+      name: 'Ani-Next',
+      short_name: 'Ani-Next',
+      description: 'Stream Anime without Ads',
       theme_color: '#ffffff',
       icons: [
         {
-          src: 'dist/AppImages/android/android-launchericon-192-192.png',
+          src: 'src/assets/AppImages/android/android-launchericon-192-192.png',
           sizes: '192x192',
           type: 'image/png',
-          purpose: 'any'
         },
         {
-          src: 'dist/AppImages/android/android-launchericon-512-512.png',
+          src: 'src/assets/AppImages/android/android-launchericon-512-512.png',
           sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any'
+          type: 'image/png'
         }
       ]
     }}
