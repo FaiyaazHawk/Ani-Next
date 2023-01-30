@@ -10,7 +10,7 @@ export default defineConfig({
       name: 'Ani-Next',
       short_name: 'Ani-Next',
       description: 'Stream Anime without Ads',
-      theme_color: '#ffffff',
+      theme_color: '#333333',
       icons: [
         {
           src: '/AppImages/android/android-launchericon-192-192.png',
