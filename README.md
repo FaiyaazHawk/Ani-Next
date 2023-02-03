@@ -33,7 +33,6 @@ My motivations in building this project was to make a simple interface to stream
 - Using Typescript for the first time allowed me to work with statically typed code and avoid simple type errors
 - Using React Router Dom to create dynamic routes using data pulled from the API
 - Setting up 3rd party video player (React Player) and using it for the project.
-- 
 
 ## Credits
 All rights to all pictures, videos and names on this website belong to the respective publishers of the animes displayed.  No files displayed are stored by me in this project.
