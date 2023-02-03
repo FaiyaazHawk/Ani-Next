@@ -17,7 +17,7 @@ My motivations in building this project was to make a simple interface to stream
 
 ## Features
 - Responsive and clear UI/UX
-- Search any Anime you want ont he search page (credit to the API for partial name search)
+- Search any Anime you want on the search page (credit to the API for partial name search)
 
 
 ## Technologies Used
