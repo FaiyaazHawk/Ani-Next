@@ -11,7 +11,7 @@ const EpisodePage = () => {
 
   let params = useParams()
 
-  let EPISODE_STRING = `https://api.consumet.org/anime/gogoanime/watch/${params.id}`
+  let EPISODE_STRING = `https://c.delusionz.xyz/anime/gogoanime/watch/${params.id}`
 
   
   const fetchEpisodesources = async () => {

@@ -1,11 +1,11 @@
 import React from 'react'
 import InfoHeader from './InfoHeader'
-import InfoEpisodes from './InfoEpisodes'
+import FlixEpisodes from './FlixEpisodes'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import '../Styles/InfoPage.css'
 
-const InfoPage = () => {
+const FlixPageMovie = () => {
 
   interface dataTypes {
     title:string;
@@ -14,19 +14,20 @@ const InfoPage = () => {
     image:string;
 }
 
-  const [animeInfo, setAnimeInfo] = React.useState<dataTypes[] | any>([])
+  const [movieInfo, setMovieInfo] = React.useState<dataTypes[] | any>([])
 
   
 
   //getting the id from the params
   let params = useParams()
 
-  let INFOPAGE_STRING = `https://c.delusionz.xyz/anime/gogoanime/info/${params.id}`
+  let INFOPAGE_STRING = `https://api.consumet.org/movies/flixhq/info?id=movie/${params.id}
+  `
 
   const fetchInfodata = async () => {
     await axios.get(INFOPAGE_STRING)
     .then((response) => {
-      setAnimeInfo(response.data)
+      setMovieInfo(response.data)
   }).catch((error) => console.log(error))
   }
     
@@ -41,10 +42,10 @@ const InfoPage = () => {
 
   return (
     <div className='infopage-body' >
-      <InfoHeader title={animeInfo.title} description={animeInfo.description} image={animeInfo.image} />
-      <InfoEpisodes episodes={animeInfo.episodes} />
+      <InfoHeader title={movieInfo.title} description={movieInfo.description} image={movieInfo.image} />
+      <FlixEpisodes episodes={movieInfo.episodes} />
     </div>
   )
 }
 
-export default InfoPage
+export default FlixPageMovie;

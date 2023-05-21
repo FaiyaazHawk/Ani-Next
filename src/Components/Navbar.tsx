@@ -10,7 +10,10 @@ const Navbar = () => {
               <Link className='link' to="/"> Home</Link>
             </li>
             <li>
-              <Link className='link' to="/search">Search</Link>
+              <Link className='link' to="/search">Search Anime</Link>
+            </li>
+            <li>
+              <Link className='link' to="/flix">Search Flix(Under construction)</Link>
             </li>
         </ul>
     </nav>

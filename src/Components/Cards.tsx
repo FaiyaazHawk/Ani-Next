@@ -16,7 +16,7 @@ const Cards = () => {
     
     //fetch top 10 results from top-airing
     const fetchMostPopular = async () => {
-       await axios.get('https://api.consumet.org/anime/gogoanime/top-airing')
+       await axios.get('https://c.delusionz.xyz/anime/gogoanime/top-airing')
         .then((response) => {
             let array = Object.values(response.data.results)
             setTopTen(array)

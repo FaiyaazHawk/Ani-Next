@@ -4,7 +4,7 @@ import Results from '../Components/Results'
 import axios from 'axios'
 import '../Styles/Search.css'
 
-const Search = () => {
+const SearchFlix = () => {
 
   const[query, setQuery] = React.useState('')
   const[results, setResults] = React.useState<any[]>([])
@@ -14,7 +14,7 @@ const Search = () => {
   }
 
   async function fetchResults(query: string) {
-    await axios.get(`https://c.delusionz.xyz/anime/gogoanime/${query}`)
+    await axios.get(`https://c.delusionz.xyz/movies/flixhq/${query}`)
       .then((response) => {
       let array = Object.values(response.data.results)
       setResults(array)
@@ -34,4 +34,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default SearchFlix
