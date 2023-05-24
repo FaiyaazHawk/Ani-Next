@@ -8,7 +8,7 @@ import FlixPageTV from './Components/FlixPageTV'
 import FlixPageMovie from './Components/FlixPageMovie'
 import EpisodePage from './Components/EpisodePage'
 import {Route, Routes} from "react-router-dom"
-import './Styles/App.css'
+import { Container } from '@mui/material'
 
 
 function App() {
@@ -16,7 +16,8 @@ function App() {
   
 
   return (
-    <div className="App">
+    <Container style={{background: '#d3d3d3'}}>
+      <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home  />}/>
@@ -29,6 +30,8 @@ function App() {
         
       </Routes>
     </div>
+    </Container>
+    
   )
 }
 

@@ -1,6 +1,7 @@
 
+import { Box, Typography } from '@mui/material';
 import React from 'react'
-import '../Styles/InfoHeader.css'
+
 interface PropTypes {
     title:string;
     description:string;
@@ -17,13 +18,19 @@ const InfoHeader = ({title, description, image}:PropTypes) => {
     
     
   return (
-    <div className='infoHeader'>
-            <img className='info-image' src={image} alt={title} />
+    <Box textAlign={'center'}>
+        <img src={image} alt={title} width={'100%'} />
         <div className="info-details">
-            <h2 className='info-title'>{title}</h2>
-            <p className='info-description'>{description}</p>
+          <Typography>
+            <h2>{title}</h2>
+          </Typography>
+          <Typography>
+            <p>{description}</p>
+          </Typography>
         </div> 
-    </div>
+    
+
+    </Box>
   )
 }
 

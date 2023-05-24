@@ -1,19 +1,25 @@
 import React, {FC} from 'react'
-import Card from './Card'
-import '../Styles/Results.css'
+import MediaCard from './MediaCard'
+import { Grid } from '@mui/material'
+
 
 interface Props {results: any[]}
 const Results: FC<Props> = ({results}) => {
 
   const resultElements = results.map((result) =>{
-    return <Card key={result.id} id={result.id} title={result.title} image={result.image} />
+    return <MediaCard key={result.id} animeId={result.id} title={result.title} image={result.image} />
   })
 
   return (
-    <div className='results'>
-      {resultElements}
-    </div>
+      
+<Grid container padding={2} gap={2} spacing={1} justifyContent={'center'}>
+        {resultElements}
+
+    </Grid>    
+      
+    
   )
 }
 
 export default Results
+

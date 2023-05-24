@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
-import '../Styles/SearchBar.css'
+import { Box } from '@mui/material'
+import { DonutLarge } from '@mui/icons-material';
+
 
 interface SearchProps { getQuery: Function}
 const SearchBar: FC<SearchProps> = ({getQuery}) => {
@@ -13,11 +15,14 @@ const SearchBar: FC<SearchProps> = ({getQuery}) => {
   }
 
   return (
+    <Box textAlign={'center'} padding={3}>
     <form className='search-bar' onSubmit={handleSubmit} >
         <label htmlFor='search'></label>
         <input ref={inputRef} className='search-box' type='text' name='search' placeholder='Find your next show' ></input>
         <button className='search-btn' type='submit'>Search</button>
     </form>
+
+    </Box>
   )
 }
 

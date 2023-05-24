@@ -1,15 +1,15 @@
 import React, { ReactNode } from 'react'
 import Cards from "../Components/Cards"
-import '../Styles/Home.css'
+import { Box } from '@mui/material'
+
 
 
 
 const Home = () => {
   return (
-    <div className='home-page'>
-      <section className='home-title'>Welcome to AniNext</section>
-      <Cards  />
-    </div>
+    <Box >
+        <Cards  />
+    </Box>
   )
 }
 

@@ -3,7 +3,8 @@ import InfoHeader from './InfoHeader'
 import InfoEpisodes from './InfoEpisodes'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import '../Styles/InfoPage.css'
+import { Box, Container } from '@mui/material'
+
 
 const InfoPage = () => {
 
@@ -40,10 +41,15 @@ const InfoPage = () => {
   
 
   return (
-    <div className='infopage-body' >
+    <Container>
+      <Box>
       <InfoHeader title={animeInfo.title} description={animeInfo.description} image={animeInfo.image} />
       <InfoEpisodes episodes={animeInfo.episodes} />
-    </div>
+
+      </Box>
+
+    </Container>
+    
   )
 }
 

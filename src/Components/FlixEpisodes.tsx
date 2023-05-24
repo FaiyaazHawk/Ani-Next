@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/InfoEpisodes.css'
+
 
 interface PropTypes {
     episodes:Object[] | any; 

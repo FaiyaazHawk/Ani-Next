@@ -1,8 +1,9 @@
 import React from 'react'
-import Card from './Card'
+import MediaCard from './MediaCard'
 import axios from 'axios'
+import { Grid } from '@mui/material'
 
-import '../Styles/Cards.css'
+
 
 
 
@@ -32,7 +33,7 @@ const Cards = () => {
     }
 
     const cardElements = topTen.map((anime: animeTypes)=> {
-        return <Card key={anime.id} id={anime.id} title={anime.title} image={anime.image} />
+        return <MediaCard key={anime.id} animeId={anime.id} title={anime.title} image={anime.image} />
     })
    
 
@@ -44,9 +45,11 @@ const Cards = () => {
     
 
   return (
-    <div className='cards-panel'>
+    <Grid container padding={2} gap={2} spacing={1} justifyContent={'center'}>
         {cardElements}
-    </div>
+
+    </Grid>
+    
   )
 }
 

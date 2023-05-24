@@ -2,7 +2,9 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import '../Styles/EpisodePage.css'
+import { Box, Container } from '@mui/material'
+
+
 
 const EpisodePage = () => {
 
@@ -33,14 +35,19 @@ const EpisodePage = () => {
   }
 
   const videoElements = episodeInfo.map((episode:episodeTypes)=> {
-    return <ReactPlayer  width={'100vw'} controls={true} key={episode.quality} url={episode.url}></ReactPlayer>
+    return <ReactPlayer  width={'50vw'} controls={true} key={episode.quality} url={episode.url}></ReactPlayer>
   })
 
   return (
-    <div className='video-player'>
-      <h1 className='episode-title'>Currently watching {params.id}</h1>
-      {episodeInfo && videoElements}
-    </div>
+    <Container>
+      <Box textAlign={'center'} justifyContent={'center'}>
+    
+        <h1 className='episode-title'>Currently watching {params.id}</h1>
+        {episodeInfo && videoElements}
+  
+
+      </Box>
+    </Container>
   )
 }
 

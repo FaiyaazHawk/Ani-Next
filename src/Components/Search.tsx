@@ -2,7 +2,7 @@ import React from 'react'
 import SearchBar from '../Components/SearchBar'
 import Results from '../Components/Results'
 import axios from 'axios'
-import '../Styles/Search.css'
+
 
 const Search = () => {
 

@@ -3,7 +3,7 @@ import InfoHeader from './InfoHeader'
 import FlixEpisodes from './FlixEpisodes'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import '../Styles/InfoPage.css'
+
 
 const FlixPageTV = () => {
 

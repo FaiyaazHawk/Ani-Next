@@ -1,5 +1,6 @@
 import React from 'react'
-import '../Styles/InfoEpisodes.css'
+import { Button } from '@mui/material';
+
 
 interface PropTypes {
     episodes:Object[] | any; 
@@ -14,9 +15,9 @@ interface EpisodeTypes {
 }
 
   return (
-    <div className='episode-wrapper'>
+    <div className='episode-wrapper' >
         {(episodes) && episodes.map((episode:EpisodeTypes)=>{
-          return <a className='episode-item' key={episode.id} href={`/video/${episode.id}`} >Episode {episode.number}</a>
+          return <Button variant='outlined' className='episode-item' key={episode.id} href={`/video/${episode.id}`} >Episode {episode.number}</Button>
         })}
     </div>
   )
