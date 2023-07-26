@@ -1,25 +1,27 @@
-import React, {FC} from 'react'
-import MediaCard from './MediaCard'
-import { Grid } from '@mui/material'
+import React, { FC } from "react";
+import MediaCard from "./MediaCard";
+import { Grid } from "@mui/material";
 
-
-interface Props {results: any[]}
-const Results: FC<Props> = ({results}) => {
-
-  const resultElements = results.map((result) =>{
-    return <MediaCard key={result.id} animeId={result.id} title={result.title} image={result.image} />
-  })
+interface Props {
+  results: any[];
+}
+const Results: FC<Props> = ({ results }) => {
+  const resultElements = results.map((result) => {
+    return (
+      <MediaCard
+        key={result.id}
+        animeId={result.id}
+        title={result.title}
+        image={result.image}
+      />
+    );
+  });
 
   return (
-      
-<Grid container padding={2} gap={2} spacing={1} justifyContent={'center'}>
-        {resultElements}
+    <Grid container padding={2} gap={2} spacing={1} justifyContent={"center"}>
+      {resultElements}
+    </Grid>
+  );
+};
 
-    </Grid>    
-      
-    
-  )
-}
-
-export default Results
-
+export default Results;
