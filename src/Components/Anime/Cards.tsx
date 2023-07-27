@@ -1,5 +1,5 @@
 import React from "react";
-import MediaCard from "./MediaCard";
+import MediaCard from "../Common/MediaCard";
 import axios from "axios";
 import { Grid } from "@mui/material";
 

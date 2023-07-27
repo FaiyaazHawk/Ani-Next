@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import Cards from "../Common/Cards";
+import Cards from "./Cards";
 import { Box } from "@mui/material";
 
 const Home = () => {
