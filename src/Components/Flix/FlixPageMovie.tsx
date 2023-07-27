@@ -1,10 +1,10 @@
 import React from "react";
-import InfoHeader from "./InfoHeader";
+import InfoHeader from "../Anime/InfoHeader";
 import FlixEpisodes from "./FlixEpisodes";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const FlixPageTV = () => {
+const FlixPageMovie = () => {
   interface dataTypes {
     title: string;
     description: string;
@@ -12,19 +12,19 @@ const FlixPageTV = () => {
     image: string;
   }
 
-  const [tvInfo, setTvInfo] = React.useState<dataTypes[] | any>([]);
+  const [movieInfo, setMovieInfo] = React.useState<dataTypes[] | any>([]);
 
   //getting the id from the params
   let params = useParams();
 
-  let INFOPAGE_STRING = `https://api.consumet.org/movies/flixhq/info?id=tv/${params.id}
+  let INFOPAGE_STRING = `https://api.consumet.org/movies/flixhq/info?id=movie/${params.id}
   `;
 
   const fetchInfodata = async () => {
     await axios
       .get(INFOPAGE_STRING)
       .then((response) => {
-        setTvInfo(response.data);
+        setMovieInfo(response.data);
       })
       .catch((error) => console.log(error));
   };
@@ -36,13 +36,13 @@ const FlixPageTV = () => {
   return (
     <div className="infopage-body">
       <InfoHeader
-        title={tvInfo.title}
-        description={tvInfo.description}
-        image={tvInfo.image}
+        title={movieInfo.title}
+        description={movieInfo.description}
+        image={movieInfo.image}
       />
-      <FlixEpisodes episodes={tvInfo.episodes} />
+      <FlixEpisodes episodes={movieInfo.episodes} />
     </div>
   );
 };
 
-export default FlixPageTV;
+export default FlixPageMovie;

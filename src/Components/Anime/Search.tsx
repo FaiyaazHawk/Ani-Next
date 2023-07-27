@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from "../Components/SearchBar";
-import Results from "../Components/Results";
+import SearchBar from "../Common/SearchBar";
+import Results from "./Results";
 import axios from "axios";
 
 const Search = () => {

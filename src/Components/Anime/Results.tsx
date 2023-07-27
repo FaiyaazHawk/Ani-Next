@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import MediaCard from "./MediaCard";
+import MediaCard from "../Common/MediaCard";
 import { Grid } from "@mui/material";
 
 interface Props {

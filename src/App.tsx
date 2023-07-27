@@ -1,11 +1,11 @@
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import Search from "./Components/Search";
-import SearchFlix from "./Components/SearchFlix";
-import InfoPage from "./Components/InfoPage";
-import FlixPageTV from "./Components/FlixPageTV";
-import FlixPageMovie from "./Components/FlixPageMovie";
-import EpisodePage from "./Components/EpisodePage";
+import Navbar from "./Components/Common/Navbar";
+import Home from "./Components/Anime/Home";
+import Search from "./Components/Anime/Search";
+import SearchFlix from "./Components/Flix/SearchFlix";
+import InfoPage from "./Components/Anime/InfoPage";
+import FlixPageTV from "./Components/Flix/FlixPageTV";
+import FlixPageMovie from "./Components/Flix/FlixPageMovie";
+import EpisodePage from "./Components/Anime/EpisodePage";
 import { Route, Routes } from "react-router-dom";
 import { Container } from "@mui/material";
 
